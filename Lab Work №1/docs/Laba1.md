@@ -64,4 +64,4 @@
 
 ## Диаграмма вариантов использования для функциональных требований
 
-![Alt text](imgs/use_cases_diagram.png)
+![Alt text](image.png)
