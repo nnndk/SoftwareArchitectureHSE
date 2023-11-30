@@ -2,4 +2,4 @@
 
 ## Тема
 
-![Alt text](image.png)
+![Alt text](var14.png)
