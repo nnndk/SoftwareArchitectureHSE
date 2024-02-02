@@ -10,10 +10,11 @@ user_fields = ['SNILS', 'Login', 'Email', 'HashPassword', 'Name', 'Surname', 'Pa
 user_fields_db = DbPostgresConnector.get_db_fields(user_fields)
 
 
-def user_exists(cursor: any, snils: str) -> bool:
+def user_exists(cursor: any, snils: str, check_deleted: bool = False) -> bool:
     cursor.execute(
         DbPostgresConnector.get_json_query(f'SELECT {user_fields_db[0]} FROM public."User" '
-                                           f'WHERE "SNILS" = \'{snils}\' and "Deleted" = false')
+                                           f'WHERE "SNILS" = \'{snils}\''
+                                           + 'and "Deleted" = false' if not check_deleted else '')
     )
     result = cursor.fetchone()
 
@@ -64,7 +65,8 @@ def create_user(user: UserModel):
     connection = DbPostgresConnector.get_connection()
 
     with connection.cursor() as cursor:
-        result = user_exists(cursor, user.snils)
+        # it is forbidden to have two (and more) users with equal snils even if one of them is deleted (by flag)
+        result = user_exists(cursor, user.snils, True)
 
         if result:
             return status.HTTP_409_CONFLICT
@@ -73,6 +75,7 @@ def create_user(user: UserModel):
                 user.surname is None or user.role_id is None):
             return status.HTTP_400_BAD_REQUEST
 
+        # place for hashing password
         new_user_data = DbPostgresConnector.get_db_values([user.snils, user.login, user.email, user.hash_password,
                                                            user.name, user.surname])
         new_user_data.append('null' if user.patronymic is None else user.patronymic)
@@ -100,6 +103,7 @@ def edit_user(snils: str, user: UserModel):
         if not result:
             return status.HTTP_404_NOT_FOUND
 
+        # place for hashing password
         updated_user_data = DbPostgresConnector.get_db_values([user.login, user.email, user.hash_password,
                                                                user.name, user.surname])
         updated_user_data.append('null' if user.patronymic is None else user.patronymic)
