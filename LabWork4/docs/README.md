@@ -26,7 +26,7 @@
         "SNILS": "string",
         "Login": "string",
         "Email": "string",
-        "Password": "string",
+        "HashPassword": "string",
         "Name": "string",
         "Surname": "string",
         "Patronymic": "string",
@@ -62,7 +62,7 @@
     "SNILS": "string",
     "Login": "string",
     "Email": "string",
-    "Password": "string",
+    "HashPassword": "string",
     "Name": "string",
     "Surname": "string",
     "Patronymic": "string",
@@ -86,7 +86,7 @@
     "SNILS": "string",
     "Login": "string",
     "Email": "string",
-    "Password": "string",
+    "HashPassword": "string",
     "Name": "string",
     "Surname": "string",
     "Patronymic": "string",
@@ -107,7 +107,7 @@
 
 <details>
 <summary>
-    <code>PATCH</code> <b><code>/users/{snils}</code></b> Update existing user by SNILS
+    <code>PUT</code> <b><code>/users/{snils}</code></b> Update existing user by SNILS
 </summary>
 
 #### Parameters
@@ -120,7 +120,7 @@
 {
     "Login": "string",
     "Email": "string",
-    "Password": "string",
+    "HashPassword": "string",
     "Name": "string",
     "Surname": "string",
     "Patronymic": "string",
@@ -152,7 +152,7 @@
 #### Responses
 > | http code     | content-type                      | response                                                            |
 > |---------------|-----------------------------------|---------------------------------------------------------------------|
-> | `200`         | `text/plain;charset=UTF-8`        | `User deleted successfully`                                         |
+> | `204`         | `text/plain;charset=UTF-8`        | `User deleted successfully`                                         |
 > | `400`         | `text/plain;charset=UTF-8`        | `Invalid SNILS value`                                               |
 > | `401`         | `text/plain;charset=UTF-8`        | `You are not authorized`                                            |
 > | `403`         | `text/plain;charset=UTF-8`        | `You don't have access rights to this action`                       |
@@ -249,7 +249,7 @@
 
 <details>
 <summary>
-    <code>PATCH</code> <b><code>/tests/{id}</code></b> Update existing test by id
+    <code>PUT</code> <b><code>/tests/{id}</code></b> Update existing test by id
 </summary>
 
 #### Parameters
@@ -289,7 +289,7 @@
 #### Responses
 > | http code     | content-type                      | response                                                            |
 > |---------------|-----------------------------------|---------------------------------------------------------------------|
-> | `200`         | `text/plain;charset=UTF-8`        | `Test deleted successfully`                                         |
+> | `204`         | `text/plain;charset=UTF-8`        | `Test deleted successfully`                                         |
 > | `401`         | `text/plain;charset=UTF-8`        | `You are not authorized`                                            |
 > | `403`         | `text/plain;charset=UTF-8`        | `You don't have access rights to this action`                       |
 > | `404`         | `text/plain;charset=UTF-8`        | `Test with such id not found`                                       |
@@ -395,7 +395,7 @@
 
 <details>
 <summary>
-    <code>PATCH</code> <b><code>/questions/{id}</code></b> Update existing question by id
+    <code>PUT</code> <b><code>/questions/{id}</code></b> Update existing question by id
 </summary>
 
 #### Parameters
@@ -437,7 +437,7 @@
 #### Responses
 > | http code     | content-type                      | response                                                            |
 > |---------------|-----------------------------------|---------------------------------------------------------------------|
-> | `200`         | `text/plain;charset=UTF-8`        | `Question deleted successfully`                                     |
+> | `204`         | `text/plain;charset=UTF-8`        | `Question deleted successfully`                                     |
 > | `401`         | `text/plain;charset=UTF-8`        | `You are not authorized`                                            |
 > | `403`         | `text/plain;charset=UTF-8`        | `You don't have access rights to this action`                       |
 > | `404`         | `text/plain;charset=UTF-8`        | `Question with such id not found`                                   |
