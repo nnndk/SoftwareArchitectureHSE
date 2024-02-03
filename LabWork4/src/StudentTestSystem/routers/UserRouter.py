@@ -127,7 +127,7 @@ def edit_user(snils: str, user: UserModel):
         return status.HTTP_200_OK
 
 
-@UserRouter.delete('/{snils}', status_code=status.HTTP_200_OK)
+@UserRouter.delete('/{snils}', status_code=status.HTTP_204_NO_CONTENT)
 def delete_user_by_snils(snils: str):
     if snils is None or not snils.isdigit() or len(snils) != 11:
         return status.HTTP_400_BAD_REQUEST
@@ -148,4 +148,4 @@ def delete_user_by_snils(snils: str):
         )
         connection.commit()
 
-        return status.HTTP_200_OK
+        return status.HTTP_204_NO_CONTENT

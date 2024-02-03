@@ -109,7 +109,7 @@ def edit_test(id: str, test: TestModel):
         return status.HTTP_200_OK
 
 
-@TestRouter.delete('/{id}', status_code=status.HTTP_200_OK)
+@TestRouter.delete('/{id}', status_code=status.HTTP_204_NO_CONTENT)
 def delete_user_by_snils(id: str):
     if id is None or not id.isdigit():
         return status.HTTP_400_BAD_REQUEST
@@ -130,4 +130,4 @@ def delete_user_by_snils(id: str):
         )
         connection.commit()
 
-        return status.HTTP_200_OK
+        return status.HTTP_204_NO_CONTENT
