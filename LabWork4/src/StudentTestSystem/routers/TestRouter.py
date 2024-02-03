@@ -1,5 +1,4 @@
 from fastapi import APIRouter, status
-from datetime import datetime
 from databaseTools.DbPostgresConnector import DbPostgresConnector
 from models.TestModel import TestModel
 

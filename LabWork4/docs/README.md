@@ -2,6 +2,12 @@
 
 ## API
 
+<b>Ошибки 401 и 403 не используются, так как для них требуется аутентификация и авторизация, реализация которых на данном этапе не предполагается.</b>
+
+### Postman: Enviroment Variables and Structure
+
+![Alt text](image.png)
+
 ### Users
 
 <details>
@@ -19,7 +25,7 @@
 > | `401`         | `text/plain;charset=UTF-8`        | `You are not authorized`                                            |
 > | `403`         | `text/plain;charset=UTF-8`        | `You don't have access rights to this content`                      |
 
-##### Example Value
+##### Response Format (200)
 ```json
 [
     {
@@ -34,6 +40,12 @@
     }
 ]
 ```
+
+##### Example Query
+http://127.0.0.1:8000/users/
+
+##### Example Response
+![Alt text](image-1.png)
 </details>
 
 
@@ -56,7 +68,7 @@
 > | `403`         | `text/plain;charset=UTF-8`        | `You don't have access rights to this content`                      |
 > | `404`         | `text/plain;charset=UTF-8`        | `User with such SNILS not found`                                    |
 
-##### Example Value
+##### Response Format (200)
 ```json
 {
     "SNILS": "string",
@@ -69,6 +81,12 @@
     "RoleId": 0
 }
 ```
+
+##### Example Query
+http://127.0.0.1:8000/users/00000000003
+
+##### Example Response
+![Alt text](image-2.png)
 </details>
 
 
@@ -102,6 +120,11 @@
 > | `401`         | `text/plain;charset=UTF-8`        | `You are not authorized`                                            |
 > | `403`         | `text/plain;charset=UTF-8`        | `You don't have access rights to this action`                       |
 > | `409`         | `text/plain;charset=UTF-8`        | `User with such SNILS already exists`                               |
+
+##### Example Query and Response
+http://127.0.0.1:8000/users/
+
+![Alt text](image-3.png)
 </details>
 
 
@@ -136,6 +159,11 @@
 > | `401`         | `text/plain;charset=UTF-8`        | `You are not authorized`                                            |
 > | `403`         | `text/plain;charset=UTF-8`        | `You don't have access rights to this action`                       |
 > | `404`         | `text/plain;charset=UTF-8`        | `User with such SNILS not found`                                    |
+
+##### Example Query and Response
+http://127.0.0.1:8000/users/00000000004
+
+![Alt text](image-4.png)
 </details>
 
 
@@ -157,6 +185,11 @@
 > | `401`         | `text/plain;charset=UTF-8`        | `You are not authorized`                                            |
 > | `403`         | `text/plain;charset=UTF-8`        | `You don't have access rights to this action`                       |
 > | `404`         | `text/plain;charset=UTF-8`        | `User with such SNILS not found`                                    |
+
+##### Example Query and Response
+http://127.0.0.1:8000/users/00000000004
+
+![Alt text](image-5.png)
 </details>
 
 
@@ -178,7 +211,7 @@
 > | `401`         | `text/plain;charset=UTF-8`        | `You are not authorized`                                            |
 > | `403`         | `text/plain;charset=UTF-8`        | `You don't have access rights to this content`                      |
 
-##### Example Value
+##### Response Format (200)
 ```json
 [
     {
@@ -188,6 +221,12 @@
     }
 ]
 ```
+
+##### Example Query
+http://127.0.0.1:8000/tests/
+
+##### Example Response
+![Alt text](image-7.png)
 </details>
 
 
@@ -210,7 +249,7 @@
 > | `403`         | `text/plain;charset=UTF-8`        | `You don't have access rights to this content`                      |
 > | `404`         | `text/plain;charset=UTF-8`        | `Test with such id not found`                                       |
 
-##### Example Value
+##### Response Format (200)
 ```json
 {
     "Id": 0,
@@ -218,6 +257,12 @@
     "CreationDate": 01/01/2000 00:00:00
 }
 ```
+
+##### Example Query
+http://127.0.0.1:8000/tests/2
+
+##### Example Response
+![Alt text](image-8.png)
 </details>
 
 
@@ -244,6 +289,11 @@
 > | `400`         | `text/plain;charset=UTF-8`        | `Invalid test info`                                                 |
 > | `401`         | `text/plain;charset=UTF-8`        | `You are not authorized`                                            |
 > | `403`         | `text/plain;charset=UTF-8`        | `You don't have access rights to this action`                       |
+
+##### Example Query and Response
+http://127.0.0.1:8000/tests/
+
+![Alt text](image-6.png)
 </details>
 
 
@@ -273,6 +323,11 @@
 > | `401`         | `text/plain;charset=UTF-8`        | `You are not authorized`                                            |
 > | `403`         | `text/plain;charset=UTF-8`        | `You don't have access rights to this action`                       |
 > | `404`         | `text/plain;charset=UTF-8`        | `Test with such id not found`                                       |
+
+##### Example Query and Response
+http://127.0.0.1:8000/tests/2
+
+![Alt text](image-9.png)
 </details>
 
 
@@ -293,6 +348,11 @@
 > | `401`         | `text/plain;charset=UTF-8`        | `You are not authorized`                                            |
 > | `403`         | `text/plain;charset=UTF-8`        | `You don't have access rights to this action`                       |
 > | `404`         | `text/plain;charset=UTF-8`        | `Test with such id not found`                                       |
+
+##### Example Query and Response
+http://127.0.0.1:8000/tests/2
+
+![Alt text](image-10.png)
 </details>
 
 

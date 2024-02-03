@@ -14,7 +14,7 @@ def user_exists(cursor: any, snils: str, check_deleted: bool = False) -> bool:
     cursor.execute(
         DbPostgresConnector.get_json_query(f'SELECT {user_fields_db[0]} FROM public."User" '
                                            f'WHERE "SNILS" = \'{snils}\''
-                                           + 'and "Deleted" = false' if not check_deleted else '')
+                                           + (' and "Deleted" = false' if not check_deleted else ''))
     )
     result = cursor.fetchone()
 
