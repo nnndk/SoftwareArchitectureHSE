@@ -5,7 +5,7 @@ class DbConnector(ABC):
     @staticmethod
     @abstractmethod
     def get_connection() -> any:
-        # Should return psycopg2.connect(...) object
+        # Example: it returns psycopg2.connect(...) object for postgres
         pass
 
     @staticmethod
