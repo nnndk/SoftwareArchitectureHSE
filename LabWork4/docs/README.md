@@ -12,7 +12,7 @@
 
 <details>
 <summary>
-    <code>GET</code> <b><code>/users</code></b> Get all users
+    <code>GET</code> <b><code>/users</code></b> Возвращает информацию обо всех пользователях в системе
 </summary>
 
 #### Parameters
@@ -51,7 +51,7 @@ http://127.0.0.1:8000/users/
 
 <details>
 <summary>
-    <code>GET</code> <b><code>/users/{snils}</code></b> Get user by SNILS
+    <code>GET</code> <b><code>/users/{snils}</code></b> Возвращает информацию о пользователе по СНИЛСу
 </summary>
 
 #### Parameters
@@ -92,7 +92,7 @@ http://127.0.0.1:8000/users/00000000003
 
 <details>
 <summary>
-    <code>POST</code> <b><code>/users</code></b> Create user
+    <code>POST</code> <b><code>/users</code></b> Создает нового пользователя
 </summary>
 
 #### Parameters
@@ -130,7 +130,7 @@ http://127.0.0.1:8000/users/
 
 <details>
 <summary>
-    <code>PUT</code> <b><code>/users/{snils}</code></b> Update existing user by SNILS
+    <code>PUT</code> <b><code>/users/{snils}</code></b> Обновляет информацию о пользователе по СНИЛСу
 </summary>
 
 #### Parameters
@@ -169,7 +169,7 @@ http://127.0.0.1:8000/users/00000000004
 
 <details>
 <summary>
-    <code>DELETE</code> <b><code>/users/{snils}</code></b> Delete user by SNILS
+    <code>DELETE</code> <b><code>/users/{snils}</code></b> Удаляет пользователя по СНИЛСу
 </summary>
 
 #### Parameters
@@ -198,7 +198,7 @@ http://127.0.0.1:8000/users/00000000004
 
 <details>
 <summary>
-    <code>GET</code> <b><code>/tests</code></b> Get all tests
+    <code>GET</code> <b><code>/tests</code></b> Возвращает всю информацию обо всех тестах в системе
 </summary>
 
 #### Parameters
@@ -232,7 +232,7 @@ http://127.0.0.1:8000/tests/
 
 <details>
 <summary>
-    <code>GET</code> <b><code>/tests/{id}</code></b> Get test by id
+    <code>GET</code> <b><code>/tests/{id}</code></b> Возвращает всю информацию о тесте по его идентификатору
 </summary>
 
 #### Parameters
@@ -268,7 +268,7 @@ http://127.0.0.1:8000/tests/2
 
 <details>
 <summary>
-    <code>POST</code> <b><code>/tests</code></b> Create test
+    <code>POST</code> <b><code>/tests</code></b> Создает новый тест
 </summary>
 
 #### Parameters
@@ -299,7 +299,7 @@ http://127.0.0.1:8000/tests/
 
 <details>
 <summary>
-    <code>PUT</code> <b><code>/tests/{id}</code></b> Update existing test by id
+    <code>PUT</code> <b><code>/tests/{id}</code></b> Обновляет информацию о тесте по его идентификатору
 </summary>
 
 #### Parameters
@@ -333,7 +333,7 @@ http://127.0.0.1:8000/tests/2
 
 <details>
 <summary>
-    <code>DELETE</code> <b><code>/tests/{id}</code></b> Delete test by id
+    <code>DELETE</code> <b><code>/tests/{id}</code></b> Удаляет тест по его идентификатору
 </summary>
 
 #### Parameters
@@ -361,7 +361,7 @@ http://127.0.0.1:8000/tests/2
 
 <details>
 <summary>
-    <code>GET</code> <b><code>/testQuestions/{testId}</code></b> Get all test questions by test id
+    <code>GET</code> <b><code>/testQuestions/{testId}</code></b> Возвращает информацию обо всех вопросах заданного теста. Тест задается по идентификатору
 </summary>
 
 #### Parameters
@@ -394,7 +394,7 @@ http://127.0.0.1:8000/tests/2
 
 <details>
 <summary>
-    <code>GET</code> <b><code>/questions/{id}</code></b> Get question by id
+    <code>GET</code> <b><code>/questions/{id}</code></b> Возвращает всю информацию о вопросе по идентификатору
 </summary>
 
 #### Parameters
@@ -426,7 +426,7 @@ http://127.0.0.1:8000/tests/2
 
 <details>
 <summary>
-    <code>POST</code> <b><code>/testQuestions/{testId}</code></b> Create question for test with such id
+    <code>POST</code> <b><code>/testQuestions/{testId}</code></b> Создает вопрос для теста с заданным идентификатором
 </summary>
 
 #### Parameters
@@ -455,7 +455,7 @@ http://127.0.0.1:8000/tests/2
 
 <details>
 <summary>
-    <code>PUT</code> <b><code>/questions/{id}</code></b> Update existing question by id
+    <code>PUT</code> <b><code>/questions/{id}</code></b> Обновляет информацию о вопросе по его идентификатору
 </summary>
 
 #### Parameters
@@ -486,7 +486,7 @@ http://127.0.0.1:8000/tests/2
 
 <details>
 <summary>
-    <code>DELETE</code> <b><code>/questions/{id}</code></b> Delete question by id
+    <code>DELETE</code> <b><code>/questions/{id}</code></b> Удаляет вопрос по его идентификтаору
 </summary>
 
 #### Parameters
