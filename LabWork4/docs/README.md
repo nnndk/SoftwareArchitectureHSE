@@ -29,14 +29,14 @@
 ```json
 [
     {
-        "SNILS": "string",
-        "Login": "string",
-        "Email": "string",
-        "HashPassword": "string",
-        "Name": "string",
-        "Surname": "string",
-        "Patronymic": "string",
-        "RoleId": 0
+        "SNILS": "string", // СНИЛС
+        "Login": "string", // Логин
+        "Email": "string", // Емайл
+        "HashPassword": "string", // Хэшированный пароль
+        "Name": "string", // Имя
+        "Surname": "string", // Фамилия
+        "Patronymic": "string", // Отчество
+        "RoleId": 0 // Роль пользователя
     }
 ]
 ```
@@ -71,14 +71,14 @@ http://127.0.0.1:8000/users/
 ##### Response Format (200)
 ```json
 {
-    "SNILS": "string",
-    "Login": "string",
-    "Email": "string",
-    "HashPassword": "string",
-    "Name": "string",
-    "Surname": "string",
-    "Patronymic": "string",
-    "RoleId": 0
+    "SNILS": "string", // СНИЛС
+    "Login": "string", // Логин
+    "Email": "string", // Емайл
+    "HashPassword": "string", // Хэшированный пароль
+    "Name": "string", // Имя
+    "Surname": "string", // Фамилия
+    "Patronymic": "string", // Отчество
+    "RoleId": 0 // Роль пользователя
 }
 ```
 
@@ -101,14 +101,14 @@ http://127.0.0.1:8000/users/00000000003
 #### Body
 ```json
 {
-    "SNILS": "string",
-    "Login": "string",
-    "Email": "string",
-    "HashPassword": "string",
-    "Name": "string",
-    "Surname": "string",
-    "Patronymic": "string",
-    "RoleId": 0
+    "SNILS": "string", // СНИЛС
+    "Login": "string", // Логин
+    "Email": "string", // Емайл
+    "HashPassword": "string", // Хэшированный пароль
+    "Name": "string", // Имя
+    "Surname": "string", // Фамилия
+    "Patronymic": "string", // Отчество
+    "RoleId": 0 // Роль пользователя
 }
 ```
 
@@ -141,13 +141,13 @@ http://127.0.0.1:8000/users/
 #### Body
 ```json
 {
-    "Login": "string",
-    "Email": "string",
-    "HashPassword": "string",
-    "Name": "string",
-    "Surname": "string",
-    "Patronymic": "string",
-    "RoleId": 0
+    "Login": "string", // Логин
+    "Email": "string", // Емайл
+    "HashPassword": "string", // Хэшированный пароль
+    "Name": "string", // Имя
+    "Surname": "string", // Фамилия
+    "Patronymic": "string", // Отчество
+    "RoleId": 0 // Роль пользователя
 }
 ```
 
@@ -215,9 +215,9 @@ http://127.0.0.1:8000/users/00000000004
 ```json
 [
     {
-        "Id": 0,
-        "Name": "string",
-        "CreationDate": 01/01/2000 00:00:00
+        "Id": 0, // Уникальный идентификатор
+        "Name": "string", // Название теста
+        "CreationDate": 01/01/2000 00:00:00 // Дата создания теста
     }
 ]
 ```
@@ -252,9 +252,9 @@ http://127.0.0.1:8000/tests/
 ##### Response Format (200)
 ```json
 {
-    "Id": 0,
-    "Name": "string",
-    "CreationDate": 01/01/2000 00:00:00
+    "Id": 0, // Уникальный идентификатор
+    "Name": "string", // Название теста
+    "CreationDate": 01/01/2000 00:00:00 // Дата создания теста
 }
 ```
 
@@ -277,8 +277,8 @@ http://127.0.0.1:8000/tests/2
 #### Body
 ```json
 {
-    "Name": "string",
-    "CreationDate": 01/01/2000 00:00:00
+    "Name": "string", // Название теста
+    "CreationDate": 01/01/2000 00:00:00 // Дата создания теста
 }
 ```
 
@@ -310,8 +310,8 @@ http://127.0.0.1:8000/tests/
 #### Body
 ```json
 {
-    "Name": "string",
-    "CreationDate": 01/01/2000 00:00:00
+    "Name": "string", // Название теста
+    "CreationDate": 01/01/2000 00:00:00 // Дата создания теста
 }
 ```
 
@@ -381,11 +381,11 @@ http://127.0.0.1:8000/tests/2
 ```json
 [
     {
-        "Id": 0,
-        "TestId": 0,
-        "Question": "string",
-        "Answer": "string",
-        "DetailedAnswer": false
+        "Id": 0, // Уникальный идентификатор
+        "TestId": 0, // Идентификатор теста, которому принадлежит вопрос
+        "Question": "string", // Вопрос
+        "Answer": "string", // Правильный ответ
+        "DetailedAnswer": false // Флаг, показывающий, является ли ответ развернутым
     }
 ]
 ```
@@ -414,11 +414,11 @@ http://127.0.0.1:8000/tests/2
 ##### Example Value
 ```json
 {
-    "Id": 0,
-    "TestId": 0,
-    "Question": "string",
-    "Answer": "string",
-    "DetailedAnswer": false
+    "Id": 0, // Уникальный идентификатор
+    "TestId": 0, // Идентификатор теста, которому принадлежит вопрос
+    "Question": "string", // Вопрос
+    "Answer": "string", // Правильный ответ
+    "DetailedAnswer": false // Флаг, показывающий, является ли ответ развернутым
 }
 ```
 </details>
@@ -437,9 +437,9 @@ http://127.0.0.1:8000/tests/2
 #### Body
 ```json
 {
-    "Question": "string",
-    "Answer": "string",
-    "DetailedAnswer": false
+    "Question": "string", // Вопрос
+    "Answer": "string", // Правильный ответ
+    "DetailedAnswer": false // Флаг, показывающий, является ли ответ развернутым
 }
 ```
 
@@ -466,10 +466,10 @@ http://127.0.0.1:8000/tests/2
 #### Body
 ```json
 {
-    "TestId": 0,
-    "Question": "string",
-    "Answer": "string",
-    "DetailedAnswer": false
+    "TestId": 0, // Идентификатор теста, которому принадлежит вопрос
+    "Question": "string", // Вопрос
+    "Answer": "string", // Правильный ответ
+    "DetailedAnswer": false // Флаг, показывающий, является ли ответ развернутым
 }
 ```
 
